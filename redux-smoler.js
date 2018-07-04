@@ -1,0 +1,1 @@
+export const createStore=r=>({s:{},c:0,r,getState(){return this.x},dispatch(m){this.x=this.r(this.x,m);Object.values(this.s).forEach(x=>x())},subscribe(f){this.s[++this.c]=f;let c=this.c;return ()=>{delete this.s[c]}}}),combineReducers=r=>(y,m)=>Object.assign({},...Object.keys(r).map(k=>({[k]:r[k]((y||{})[k],m)})))
